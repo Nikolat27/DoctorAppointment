@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <body>
+    <h2 style="text-align: center">Our Doctors:</h2>
+    <br>
+    {% for doctor in doctors %}
+        <div class="appointments-container">
+            <div class="appointment-card">
+                <h2>Dr.{{ doctor.doctor_name }}: </h2>
+                <p>Field: {{ doctor.expertise }}</p>
+                <img src="{{ doctor.profile_pic.url }}" alt="" height="300" width="300">
+                <p>Description: {{ doctor.description|truncatewords:25 }}</p>
+                <br>
+                <a href="{% url "service_app:doctor_detail" doctor.id %}">Detail Page!</a>
+                <hr>
+            </div>
+        </div>
+    {% endfor %}
+    </body>
+{% endblock %}

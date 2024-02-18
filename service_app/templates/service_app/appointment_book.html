@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <body>
+
+    <div align="center">
+        <form action="{% url "service_app:patient_register" doctor appointment %}"
+              method="POST">
+            {% csrf_token %}
+            <br><br>
+            Your name:
+            <input type="text" name="patient_name">
+            <br><br>
+            Your phone number:
+            <input type="text" name="phone_number">
+            <br><br>
+            Your email:
+            <input type="text" name="email">
+            <br><br>
+            <button type="submit">Book</button>
+        </form>
+    </div>
+    </body>
+{% endblock %}

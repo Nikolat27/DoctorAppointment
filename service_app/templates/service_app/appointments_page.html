@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <body>
+    {% for appointment in appointments %}
+        <div class="appointments-container">
+            <div class="appointment-card">
+                <h2>Appointment num {{ forloop.counter }}: </h2>
+                <p>Date: {{ appointment.date }}</p>
+                <br>
+                <p>{{ appointment.time_difference }}</p>
+                <br>
+                <p>Jalali Date: {{ appointment.JalaliDate }}</p>
+                <br>
+                Booked situation:
+                {% if appointment.booked is True %}
+                    <span style="font-weight: bold; color: red">This time is booked!</span>
+                    <br>
+                {% else %}
+                    <span style="font-weight: bold; color: green">This time is Free!</span>
+                    <a href="{% url "service_app:patient_register" appointment.doctor_id appointment.id %}">Book this
+                        Appointment</a>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+    </body>
+{% endblock %}

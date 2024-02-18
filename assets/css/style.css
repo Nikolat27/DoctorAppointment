@@ -1,0 +1,91 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.hero {
+    background: url('assets/img/1200px-LTC-400.png') center/cover;
+    color: #fff;
+    text-align: center;
+}
+
+.services {
+    padding: 2rem;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.services .service {
+    border: 1px solid #ddd;
+    margin: 0 auto 1rem;
+    padding: 1rem;
+    max-width: 300px;
+}
+
+.about {
+    text-align: center;
+    padding: 2rem;
+    background: #f9f9f9;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.appointments-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.appointment-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 300px;
+}
+
+.appointment-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.appointment-card p {
+    font-size: 1em;
+    margin: 5px 0;
+}

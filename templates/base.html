@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Website</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+<header>
+    <h1>Doctor Appointment</h1>
+    <nav>
+        <a href="{% url "home_app:main" %}">Home</a>
+        <a href="{% url "service_app:doctors_list" %}">Doctors</a>
+        <a href="{% url "home_app:about-contact" %}">About/Contact</a>
+    </nav>
+</header>
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>

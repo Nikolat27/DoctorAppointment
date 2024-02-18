@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <section class="hero">
+        <h2>Welcome to Our Clinic</h2>
+        <p>Book your appointment with top doctors.</p>
+        <a href="{% url "service_app:doctors_list" %}" class="btn">View Doctors</a>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>General Check-up</h3>
+            <p>Regular health examinations.</p>
+        </div>
+        <div class="service">
+            <h3>Specialist Consultation</h3>
+            <p>Consult with specialized doctors.</p>
+        </div>
+    </section>
+{% endblock %}
